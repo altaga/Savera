@@ -28,9 +28,13 @@ Savera is a blockchain wallet and platform that empowers undeserved communities 
 
 ## Wallet:
 
-Our main screen is our Main Account, which is a traditional wallet to manage our assets. All balances and coins are in **Mainnet** and the code for this screen is as follows. 
+Our main screen is our Main Account, which is a traditional wallet to manage our assets. All balances are in **Mainnet** and the code for this screen is as follows. 
 
-<img src="" width="32%">
+<img src="https://i.ibb.co/NYdwmLQ/Screenshot-20240818-135751.png" width="32%">
+
+En el caso de Hedera todos los tokens que querramos en nuestra wallet tendran que ser asociados desde la main wallet. El costo po asociacion de token es de $0.05 USD (updated 08/18/2024)
+
+<img src="https://i.ibb.co/Zg2ZTXX/Screenshot-20240818-153622.png" width="32%"> <img src="https://i.ibb.co/h82vz6V/Screenshot-20240818-153627.png" width="32%">
 
 All technical implementations for this tab are included here.
 
@@ -40,7 +44,7 @@ All technical implementations for this tab are included here.
 
 This screen is important and allows us to make simple or batch transfers from our wallet. And the code for this screen is the following. 
 
-<img src="" width="32%">
+<img src="https://i.ibb.co/CBZBYPS/Screenshot-20240818-140838.png" width="32%"> <img src="https://i.ibb.co/WfXgtCg/Screenshot-20240818-162928.png" width="32%">
 
 It should be remembered that if the Savings account is active, one more transaction will be added to the final transfer to our savings account. All this is very easy to do with Hedera, even if Visa is one of its clients. [2](#references).
 
@@ -52,7 +56,11 @@ All technical implementations for this tab are included here.
 
 With this screen, you can easily show your Wallet to receive funds, whether Hedera or Any Token.
 
-<img src="" width="32%">
+<img src="https://i.ibb.co/bKwfwBM/Screenshot-20240818-140842.png" width="32%">
+
+User Interface Fun Fact: para mantener la compatibilidad de las wallets como Blade Wallet con nuestra app, fue necesario rendondear los border del codigo QR en esta seccion, ya que si los bordes no son redondeados estas wallets no realizan la lectura del AccountId.
+
+<img src="https://i.ibb.co/jfdNx76/Screenshot-20240818-140842.png" width="32%">
 
 All technical implementations for this tab are included here.
 - [CODE](./Savera/src/screens/depositWallet/depositWallet.js) 
@@ -61,7 +69,7 @@ All technical implementations for this tab are included here.
 
 In this tab we intend to make it the same as using a traditional POS, this allows us to enter the amount to be charged in USD and to be able to make the payment with one of our virtual cards. And this is the function code: 
 
-<img src="" width="32%"> <img src="" width="32%">
+<img src="https://i.ibb.co/G9JSbDS/Screenshot-20240818-143449.png" width="32%"> <img src="https://i.ibb.co/m8BJNNY/Screenshot-20240818-143457.png" width="32%"> <img src="https://i.ibb.co/jMBYR5H/Screenshot-20240818-143514.png" width="32%">
 
 All technical implementations for this tab are included here.
 - [CODE](./Savera/src/screens/paymentWallet/paymentWallet.js)
