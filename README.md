@@ -73,12 +73,13 @@ In this tab we intend to make it the same as using a traditional POS, this allow
 
 All technical implementations for this tab are included here.
 - [CODE](./Savera/src/screens/paymentWallet/paymentWallet.js)
+- [WITHDRAW FROM CARD](./Cloud%20Functions/WithdrawCard.js)
 
 ## Savings:
 
 The savings account is a Non Custodial Wallet which allows us to have savings based on protocols. We will explain these protocols a little later. However, on this screen you can withdraw the savings according to the defined date and the code on this screen is the next. 
 
-<img src="" width="32%"> <img src="" width="32%"> <img src="" width="32%">
+<img src="https://i.ibb.co/jr4Pt2y/Screenshot-20240818-143426.png" width="32%"> <img src="https://i.ibb.co/km1rZ2P/Screenshot-20240818-143436.png" width="32%"> <img src="https://i.ibb.co/zXtX114/Screenshot-20240818-143442.png" width="32%">
 
 All technical implementations for this tab are included here.
 - [CODE](./Savera/src/screens/main/tabs/tab2.js)
@@ -125,13 +126,13 @@ All technical implementations for this tab are included here.
 
 ## Cards:
 
-Finally, in the cards section, we can create a virtual card, which will help us make payments without the need for our wallet directly with a physical card in any POS terminal with Savera. And the code for this screen is the following. [CODE](./Savera/src/screens/main/tabs/tab3.js)
+Finally, in the cards section, we can create a virtual card, which will help us make payments without the need for our wallet directly with a physical card in any POS terminal with Savera. And the code for this screen is the following. 
 
-<img src="https://i.ibb.co/19xwk9R/Vlcsnap-2024-07-14-14h49m24s924.png" width="32%"> <img src="https://i.ibb.co/Yypw7nY/Vlcsnap-2024-07-14-14h49m31s080.png" width="32%">
+<img src="https://i.ibb.co/b6L5w6M/Screenshot-20240818-165511.png" width="32%"> <img src="https://i.ibb.co/Bz6tG5F/Screenshot-20240818-165514.png" width="32%"> <img src="https://i.ibb.co/60npHhk/Screenshot-20240818-165521.png" width="32%">
 
 All technical implementations for this tab are included here.
+- [CODE](./Savera/src/screens/main/tabs/tab3.js)
 - [ADD CARD](./Cloud%20Functions/AddCard.js)
-- [WITHDRAW CARD](./Cloud%20Functions/WithdrawCard.js)
 
 # References:
 
