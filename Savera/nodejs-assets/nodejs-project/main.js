@@ -9,7 +9,6 @@ const {
   PublicKey,
   PrivateKey,
   AccountCreateTransaction,
-  HbarUnit,
 } = require('@hashgraph/sdk');
 var crypto = require('crypto');
 

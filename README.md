@@ -2,7 +2,7 @@
 
 Savera Wallet: Assets management, optimized savings, and seamless card payments.
 
-<img src="https://i.ibb.co/3fKwscT/Promo.png">
+<img src="https://i.ibb.co/4ggQKJ7/tmp1z3l4md1-1-1.png">
 
 ## Fast Links:
 
@@ -26,13 +26,23 @@ VIDEO DEMO: [VIDEO](Pending...)
 
 Savera is a blockchain wallet and platform that empowers undeserved communities through saving. Employing novel Blockchain technologies through Hedera such as predictable fees and optimized savings. It also combines it with TradFi via seamless card payments.
 
+## React Native Implementation:
+
+Durante el hackathon notamos que la compatibilidad con el framework de React Native no estaba implementado correctamente ya que requeria la instalacion de un framework adicional llamado [Expo](https://expo.dev/). Sin embrgo nosotros logramos la implementacion en proyectos de React Native puro al utilizar un [Native NodeJS Server](https://github.com/nodejs-mobile/nodejs-mobile-react-native) corriendo en paralelo.
+
+<img src="https://i.ibb.co/f2gK4BG/image.png" style="margin-top:30px;margin-bottom:50px;">
+
+All technical implementations for this tab are included here.
+
+- [CODE](./Savera/nodejs-assets/nodejs-project/main.js)
+
 ## Wallet:
 
 Our main screen is our Main Account, which is a traditional wallet to manage our assets. All balances are in **Mainnet** and the code for this screen is as follows. 
 
 <img src="https://i.ibb.co/NYdwmLQ/Screenshot-20240818-135751.png" width="32%">
 
-En el caso de Hedera todos los tokens que querramos en nuestra wallet tendran que ser asociados desde la main wallet. El costo po asociacion de token es de $0.05 USD (updated 08/18/2024)
+En el caso de Hedera todos los tokens que querramos en nuestra wallet tendran que ser asociados desde la main wallet. El costo por asociacion de token es de $0.05 USD (updated 08/18/2024)
 
 <img src="https://i.ibb.co/Zg2ZTXX/Screenshot-20240818-153622.png" width="32%"> <img src="https://i.ibb.co/h82vz6V/Screenshot-20240818-153627.png" width="32%">
 
