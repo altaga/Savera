@@ -32,6 +32,8 @@ Durante el hackathon notamos que la compatibilidad con el framework de React Nat
 
 <img src="https://i.ibb.co/f2gK4BG/image.png" style="margin-top:30px;margin-bottom:50px;">
 
+Ademas al tener un servidor de NodeJS en paralelo disponemos de todo el modulo crypto sin necesidad de ocupar alternativas de React Native, asi aligerando el peso de la App y mejorando la experiencia de usuario al descargar la Wallet.
+
 All technical implementations for this tab are included here.
 
 - [CODE](./Savera/nodejs-assets/nodejs-project/main.js)
