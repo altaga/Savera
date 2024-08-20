@@ -1,9 +1,5 @@
 # Savera
 
-Savera Wallet: Assets management, optimized savings, and seamless card payments.
-
-<img src="https://i.ibb.co/4ggQKJ7/tmp1z3l4md1-1-1.png">
-
 ## Fast Links:
 
 WALLET CODE: [CODE](./Savera/)
@@ -13,6 +9,12 @@ PLAYSTORE: [LINK](https://play.google.com/store/apps/details?id=com.altaga.saver
 VIDEO DEMO: [VIDEO](https://youtu.be/APm5rPMn-Kg)
 
 # Trials in Businesses
+
+Video:
+
+Non-edited video:
+
+<img src="https://i.ibb.co/4ggQKJ7/tmp1z3l4md1-1-1.png">
 
 # System Diagrams:
 
