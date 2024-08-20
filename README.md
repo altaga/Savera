@@ -10,9 +10,9 @@ VIDEO DEMO: [VIDEO](https://youtu.be/APm5rPMn-Kg)
 
 # Trials in Businesses
 
-Video: [VIDEO](pending...)
+VIDEO: [VIDEO](pending...)
 
-Non-edited video: [VIDEO](https://youtu.be/UTTW62M5JV4)
+NON-EDITED VIDEO: [VIDEO](https://youtu.be/UTTW62M5JV4)
 
 <img src="https://i.ibb.co/4ggQKJ7/tmp1z3l4md1-1-1.png">
 
