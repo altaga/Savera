@@ -10,7 +10,7 @@ WALLET CODE: [CODE](./Savera/)
 
 PLAYSTORE: [LINK](https://play.google.com/store/apps/details?id=com.altaga.savera)
 
-VIDEO DEMO: [VIDEO](Pending...)
+VIDEO DEMO: [VIDEO](https://youtu.be/APm5rPMn-Kg)
 
 # Trials in Businesses
 
