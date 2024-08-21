@@ -10,7 +10,7 @@ VIDEO DEMO: [VIDEO](https://youtu.be/APm5rPMn-Kg)
 
 # Trials in Businesses
 
-VIDEO: [VIDEO](pending...)
+VIDEO in a real business: [VIDEO](https://youtu.be/w2WL8tunOlk)
 
 NON-EDITED VIDEO: [VIDEO](https://youtu.be/UTTW62M5JV4)
 
