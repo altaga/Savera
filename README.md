@@ -32,11 +32,11 @@ Savera is a blockchain wallet and platform that empowers undeserved communities 
 
 ## React Native Implementation:
 
-Durante el hackathon notamos que la compatibilidad con el framework de React Native no estaba implementado correctamente ya que requeria la instalacion de un framework adicional llamado [Expo](https://expo.dev/). Sin embrgo nosotros logramos la implementacion en proyectos de React Native puro al utilizar un [Native NodeJS Server](https://github.com/nodejs-mobile/nodejs-mobile-react-native) corriendo en paralelo.
+During the hackathon we noticed that support for the React Native framework was not implemented correctly as it required the installation of an additional framework called [Expo](https://expo.dev/). However, we achieved the implementation in pure React Native projects by using a [Native NodeJS Server](https://github.com/nodejs-mobile/nodejs-mobile-react-native) running in parallel.
 
 <img src="https://i.ibb.co/f2gK4BG/image.png" style="margin-top:30px;margin-bottom:50px;">
 
-Ademas al tener un servidor de NodeJS en paralelo disponemos de todo el modulo crypto sin necesidad de ocupar alternativas de React Native, asi aligerando el peso de la App y mejorando la experiencia de usuario al descargar la Wallet.
+In addition, by having a NodeJS server in parallel, we have the entire crypto module without needing to use React Native alternatives, thus lightening the weight of the App and improving the user experience when downloading the Wallet.
 
 All technical implementations for this tab are included here.
 
@@ -48,7 +48,7 @@ Our main screen is our Main Account, which is a traditional wallet to manage our
 
 <img src="https://i.ibb.co/NYdwmLQ/Screenshot-20240818-135751.png" width="32%">
 
-En el caso de Hedera todos los tokens que querramos en nuestra wallet tendran que ser asociados desde la main wallet. El costo por asociacion de token es de $0.05 USD (updated 08/18/2024)
+In the case of Hedera, all the tokens that we want in our wallet will have to be associated from the main wallet. The cost per token association is $0.05 USD (updated 08/18/2024)
 
 <img src="https://i.ibb.co/Zg2ZTXX/Screenshot-20240818-153622.png" width="32%"> <img src="https://i.ibb.co/h82vz6V/Screenshot-20240818-153627.png" width="32%">
 
@@ -74,7 +74,7 @@ With this screen, you can easily show your Wallet to receive funds, whether Hede
 
 <img src="https://i.ibb.co/bKwfwBM/Screenshot-20240818-140842.png" width="32%">
 
-User Interface Fun Fact: para mantener la compatibilidad de las wallets como Blade Wallet con nuestra app, fue necesario rendondear los border del codigo QR en esta seccion, ya que si los bordes no son redondeados estas wallets no realizan la lectura del AccountId.
+User Interface Fun Fact: To maintain the compatibility of wallets like Blade Wallet with our app, it was necessary to round the edges of the QR code in this section, since if the edges are not rounded these wallets will not read the AccountId.
 
 <img src="https://i.ibb.co/jfdNx76/Screenshot-20240818-140842.png" width="32%">
 
