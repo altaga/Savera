@@ -28,6 +28,7 @@ export default function App() {
     );
     nodejs.channel.post('message', 'Node JS Started');
   }, []);
+  
   return (
     <ContextProvider>
       <NavigationContainer>

@@ -14,13 +14,13 @@ VIDEO in a real business: [VIDEO](https://youtu.be/w2WL8tunOlk)
 
 NON-EDITED VIDEO: [VIDEO](https://youtu.be/UTTW62M5JV4)
 
-<img src="https://i.ibb.co/4ggQKJ7/tmp1z3l4md1-1-1.png">
+<img src="./Images/01.png">
 
 # System Diagrams:
 
-<img src="https://i.ibb.co/bBfX053/savera-drawio.png">
+<img src="./Images/02.png">
 
-- Main Account: Within the schematics you can see that we have our main wallet, which is a Non Custodial Wallet, to which you will have to save its mnemonic at the time of its creation. Como todas las wallets del mercado la creacion de tu wallet es gratuita, sin embargo tendras que pagar las fees de creacion de las savings account y la card account.
+- Main Account: Within the schematics you can see that we have our main wallet, which is a Non Custodial Wallet, to which you will have to save its mnemonic at the time of its creation. Like all wallets on the market, creating your wallet is free, however you will have to pay fees for creating the savings account and the card account.
 
 - Savings Account: This wallet, like the previous one, is a Non Custodial Wallet, which will save the savings on each transaction according to the chosen savings protocol.
 
@@ -34,7 +34,7 @@ Savera is a blockchain wallet and platform that empowers undeserved communities 
 
 During the hackathon we noticed that support for the React Native framework was not implemented correctly as it required the installation of an additional framework called [Expo](https://expo.dev/). However, we achieved the implementation in pure React Native projects by using a [Native NodeJS Server](https://github.com/nodejs-mobile/nodejs-mobile-react-native) running in parallel.
 
-<img src="https://i.ibb.co/f2gK4BG/image.png" style="margin-top:30px;margin-bottom:50px;">
+<img src="./Images/03.png" style="margin-top:30px;margin-bottom:50px;">
 
 In addition, by having a NodeJS server in parallel, we have the entire crypto module without needing to use React Native alternatives, thus lightening the weight of the App and improving the user experience when downloading the Wallet.
 
@@ -46,11 +46,11 @@ All technical implementations for this tab are included here.
 
 Our main screen is our Main Account, which is a traditional wallet to manage our assets. All balances are in **Mainnet** and the code for this screen is as follows. 
 
-<img src="https://i.ibb.co/NYdwmLQ/Screenshot-20240818-135751.png" width="32%">
+<img src="./Images/04.png" width="32%">
 
 In the case of Hedera, all the tokens that we want in our wallet will have to be associated from the main wallet. The cost per token association is $0.05 USD (updated 08/18/2024)
 
-<img src="https://i.ibb.co/Zg2ZTXX/Screenshot-20240818-153622.png" width="32%"> <img src="https://i.ibb.co/h82vz6V/Screenshot-20240818-153627.png" width="32%">
+<img src="./Images/05.png" width="32%"> <img src="./Images/06.png" width="32%">
 
 All technical implementations for this tab are included here.
 
@@ -60,7 +60,7 @@ All technical implementations for this tab are included here.
 
 This screen is important and allows us to make simple or batch transfers from our wallet. And the code for this screen is the following. 
 
-<img src="https://i.ibb.co/CBZBYPS/Screenshot-20240818-140838.png" width="32%"> <img src="https://i.ibb.co/WfXgtCg/Screenshot-20240818-162928.png" width="32%">
+<img src="./Images/07.png" width="32%"> <img src="./Images/08.png" width="32%">
 
 It should be remembered that if the Savings account is active, one more transaction will be added to the final transfer to our savings account. All this is very easy to do with Hedera, even if Visa is one of its clients. [2](#references).
 
@@ -72,11 +72,11 @@ All technical implementations for this tab are included here.
 
 With this screen, you can easily show your Wallet to receive funds, whether Hedera or Any Token.
 
-<img src="https://i.ibb.co/bKwfwBM/Screenshot-20240818-140842.png" width="32%">
+<img src="./Images/09.png" width="32%">
 
 User Interface Fun Fact: To maintain the compatibility of wallets like Blade Wallet with our app, it was necessary to round the edges of the QR code in this section, since if the edges are not rounded these wallets will not read the AccountId.
 
-<img src="https://i.ibb.co/jfdNx76/Screenshot-20240818-140842.png" width="32%">
+<img src="./Images/10.png" width="32%">
 
 All technical implementations for this tab are included here.
 - [CODE](./Savera/src/screens/depositWallet/depositWallet.js) 
@@ -85,7 +85,7 @@ All technical implementations for this tab are included here.
 
 In this tab we intend to make it the same as using a traditional POS, this allows us to enter the amount to be charged in USD and to be able to make the payment with one of our virtual cards. And this is the function code: 
 
-<img src="https://i.ibb.co/G9JSbDS/Screenshot-20240818-143449.png" width="32%"> <img src="https://i.ibb.co/m8BJNNY/Screenshot-20240818-143457.png" width="32%"> <img src="https://i.ibb.co/jMBYR5H/Screenshot-20240818-143514.png" width="32%">
+<img src="./Images/11.png" width="32%"> <img src="./Images/12.png" width="32%"> <img src="./Images/13.png" width="32%">
 
 All technical implementations for this tab are included here.
 - [CODE](./Savera/src/screens/paymentWallet/paymentWallet.js)
@@ -95,7 +95,7 @@ All technical implementations for this tab are included here.
 
 The savings account is a Non Custodial Wallet which allows us to have savings based on protocols. We will explain these protocols a little later. However, on this screen you can withdraw the savings according to the defined date and the code on this screen is the next. 
 
-<img src="https://i.ibb.co/jr4Pt2y/Screenshot-20240818-143426.png" width="32%"> <img src="https://i.ibb.co/km1rZ2P/Screenshot-20240818-143436.png" width="32%"> <img src="https://i.ibb.co/zXtX114/Screenshot-20240818-143442.png" width="32%">
+<img src="./Images/14.png" width="32%"> <img src="./Images/15.png" width="32%"> <img src="./Images/16.png" width="32%">
 
 All technical implementations for this tab are included here.
 - [CODE](./Savera/src/screens/main/tabs/tab2.js)
@@ -144,7 +144,7 @@ All technical implementations for this tab are included here.
 
 Finally, in the cards section, we can create a virtual card, which will help us make payments without the need for our wallet directly with a physical card in any POS terminal with Savera. And the code for this screen is the following. 
 
-<img src="https://i.ibb.co/b6L5w6M/Screenshot-20240818-165511.png" width="32%"> <img src="https://i.ibb.co/Bz6tG5F/Screenshot-20240818-165514.png" width="32%"> <img src="https://i.ibb.co/60npHhk/Screenshot-20240818-165521.png" width="32%">
+<img src="./Images/17.png" width="32%"> <img src="./Images/18.png" width="32%"> <img src="./Images/19.png" width="32%">
 
 All technical implementations for this tab are included here.
 - [CODE](./Savera/src/screens/main/tabs/tab3.js)
