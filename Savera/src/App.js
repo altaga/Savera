@@ -13,6 +13,7 @@ import {ContextProvider} from './utils/contextModule';
 import TransactionsModal from './utils/transactionsModal';
 import SendWallet from './screens/sendWallet/sendWallet';
 import PaymentWallet from './screens/paymentWallet/paymentWallet';
+import Chat from './screens/chat/chat';
 
 const Stack = createNativeStackNavigator();
 
@@ -28,7 +29,7 @@ export default function App() {
     );
     nodejs.channel.post('message', 'Node JS Started');
   }, []);
-  
+
   return (
     <ContextProvider>
       <NavigationContainer>
@@ -59,6 +60,10 @@ export default function App() {
           <Stack.Screen name="DepositWallet" component={DepositWallet} />
           <Stack.Screen name="SendWallet" component={SendWallet} />
           <Stack.Screen name="PaymentWallet" component={PaymentWallet} />
+          {
+            // Chat Screens
+          }
+          <Stack.Screen name="Chat" component={Chat} />
         </Stack.Navigator>
       </NavigationContainer>
     </ContextProvider>

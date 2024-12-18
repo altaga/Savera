@@ -1,4 +1,4 @@
-import {ethers} from 'ethers';
+import {ethers, Wallet} from 'ethers';
 import nodejs from 'nodejs-mobile-react-native';
 import React, {Component} from 'react';
 import {Pressable, RefreshControl, ScrollView, Text, View} from 'react-native';
@@ -10,6 +10,7 @@ import {
   arraySum,
   epsilonRound,
   getAsyncStorageValue,
+  getEncryptedStorageValue,
   setAsyncStorageValue,
 } from '../../../utils/utils';
 import LinearGradient from 'react-native-linear-gradient';

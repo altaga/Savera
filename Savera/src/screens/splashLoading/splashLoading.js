@@ -6,7 +6,8 @@ import EncryptedStorage from 'react-native-encrypted-storage';
 import logoSplash from '../../assets/logoHeader.png';
 import GlobalStyles from '../../styles/styles';
 import ContextModule from '../../utils/contextModule';
-import { getAsyncStorageValue } from '../../utils/utils';
+import { getAsyncStorageValue, getEncryptedStorageValue } from '../../utils/utils';
+import { Wallet } from 'ethers';
 
 class SplashLoading extends Component {
   constructor(props) {
@@ -22,7 +23,8 @@ class SplashLoading extends Component {
       //await this.erase()
       console.log(this.props.route.name);
       const accountId = await getAsyncStorageValue('accountId');
-      const publicKey = await getAsyncStorageValue('publicKey');
+      const mnemonic = await getEncryptedStorageValue('mnemonic');
+      const publicKey = Wallet.fromMnemonic(mnemonic).address;
       const balances = await getAsyncStorageValue('balances');
       const activeTokens = await getAsyncStorageValue('activeTokens');
       // Savings
@@ -43,6 +45,7 @@ class SplashLoading extends Component {
       const balancesCard = await getAsyncStorageValue('balancesCard');
       const activeTokensCard = await getAsyncStorageValue('activeTokensCard');
       const usdConversion = await getAsyncStorageValue('usdConversion');
+      const chatGeneral = await getAsyncStorageValue('chatGeneral');
       this.context.setValue({
         accountId: accountId ?? this.context.value.accountId,
         publicKey: publicKey ?? this.context.value.publicKey,
@@ -69,6 +72,7 @@ class SplashLoading extends Component {
         activeTokensCard:
           activeTokensCard ?? this.context.value.activeTokensCard,
         usdConversion: usdConversion ?? this.context.value.usdConversion,
+        chatGeneral: chatGeneral ?? this.context.value.chatGeneral,
       });
       if (accountId) {
         //this.props.navigation.navigate('Lock');

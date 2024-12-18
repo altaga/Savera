@@ -7,6 +7,8 @@ const h = 50;
 
 export const refreshRate = 1000 * 60;
 
+export const USDCicon = <Image source={USDC} style={{ width: 30, height: 30, borderRadius: 10 }} />
+
 export const iconsBlockchain = {
   hbar: (
     <Image
@@ -42,10 +44,12 @@ export const blockchain = {
   blockExplorer: 'https://hashscan.io/mainnet/',
   iconSymbol: 'hbar',
   decimals: 8,
+  monoChainChat: '0xF9D9dF475a060dE9B6889DB4fE0b27Bf4118400F',
   tokens: [
     // Updated April/19/2024
     {
       name: 'Hedera',
+      evmAddress: '0x0000000000000000000000000000000000000000',
       symbol: 'HBAR',
       tokenId: '0.0.000000',
       decimals: 8,
@@ -54,6 +58,7 @@ export const blockchain = {
     },
     {
       name: 'USD Coin',
+      evmAddress: '0x000000000000000000000000000000000006f89a',
       symbol: 'USDC',
       tokenId: '0.0.456858',
       decimals: 6,

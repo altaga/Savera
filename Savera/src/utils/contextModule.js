@@ -35,6 +35,7 @@ class ContextProvider extends React.Component {
         activeTokensCard: blockchain.tokens.map(() => true),
         // Utils
         usdConversion: blockchain.tokens.map(() => 1),
+        chatGeneral: [],
         // Transaction Active
         isTransactionActive: false, // false
         isSavingsTransaction : false,

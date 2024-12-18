@@ -141,7 +141,7 @@ const GlobalStyles = StyleSheet.create({
   },
   // Selectors
   selector: {
-    width: Dimensions.get('window').width * 0.3333,
+    width: Dimensions.get('window').width * 0.25,
     height: 'auto',
     justifyContent: 'center',
     alignItems: 'center',
@@ -247,6 +247,19 @@ const GlobalStyles = StyleSheet.create({
     height: 50,
     marginBottom: 20,
     marginTop: 20,
+  },
+  inputChat: {
+    borderRadius: 25,
+    borderColor: secondaryColor,
+    borderWidth: 2,
+    marginTop: 20,
+    color: 'black',
+    backgroundColor: 'white',
+    fontSize: 20,
+    paddingHorizontal: 20,
+    textAlign: 'justify',
+    width: '76%',
+    alignSelf: 'flex-end',
   },
   // Modal
   singleModalButton: {

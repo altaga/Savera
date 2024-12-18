@@ -1,5 +1,5 @@
 import Clipboard from '@react-native-clipboard/clipboard';
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import {
   Dimensions,
   Image,
@@ -12,12 +12,15 @@ import QRCodeStyled from 'react-native-qrcode-styled';
 import IconIonicons from 'react-native-vector-icons/Ionicons';
 import Renders from '../../assets/logoHeader.png';
 import Title from '../../assets/title.png';
-import GlobalStyles, { header, ratio, secondaryColor } from '../../styles/styles';
+import GlobalStyles, {header, ratio, secondaryColor} from '../../styles/styles';
 import ContextModule from '../../utils/contextModule';
 
 class DepositWallet extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      flag: false,
+    };
   }
 
   static contextType = ContextModule;
@@ -63,87 +66,183 @@ class DepositWallet extends Component {
             />
           </View>
         </View>
-        <View
-          style={[
-            GlobalStyles.mainSend,
-            {justifyContent: 'space-around', alignItems: 'center'},
-          ]}>
-          <Text style={GlobalStyles.exoTitle}>Receive Hbar or Tokens</Text>
-          <QRCodeStyled
-            maxSize={Dimensions.get('screen').width}
-            data={this.context.value.accountId}
-            style={[
-              {
-                backgroundColor: 'white',
-                borderRadius: 10,
-              },
-            ]}
-            errorCorrectionLevel="H"
-            padding={16}
-            //pieceSize={10}
-            pieceBorderRadius={4}
-            isPiecesGlued
-            color={'black'}
-            outerEyesOptions={{
-              topLeft: {
-                borderRadius: [30, 30, 30, 30],
-              },
-              topRight: {
-                borderRadius: [30, 30, 30, 30],
-              },
-              bottomLeft: {
-                borderRadius: [30, 30, 30, 30],
-              },
-            }}
-            innerEyesOptions={{
-              borderRadius: 15,
-            }}
-          />
+        {!this.state.flag ? (
           <View
-            style={{
-              flexDirection: 'row',
-              justifyContent: 'space-between',
-              alignItems: 'center',
-            }}>
-            <Text
-              style={{
-                fontSize: ratio > 1.7 ? 24 : 20,
-                fontWeight: 'bold',
-                color: 'white',
-                textAlign: 'center',
-                width: '85%',
-              }}>
-              AccountId: {'\n'}
-              {this.context.value.accountId}
-            </Text>
+            style={[
+              GlobalStyles.mainSend,
+              {justifyContent: 'space-around', alignItems: 'center'},
+            ]}>
+            <Text style={GlobalStyles.exoTitle}>Receive Hbar or Tokens</Text>
             <Pressable
               onPress={() => {
-                Clipboard.setString(this.context.value.accountId);
-                ToastAndroid.show(
-                  'Address copied to clipboard',
-                  ToastAndroid.LONG,
-                );
-              }}
-              style={{
-                width: '15%',
-                alignItems: 'flex-start',
+                this.setState({flag: !this.state.flag});
               }}>
-              <IconIonicons name="copy" size={30} color={'white'} />
+              <QRCodeStyled
+                maxSize={Dimensions.get('screen').width}
+                data={this.context.value.accountId}
+                style={[
+                  {
+                    backgroundColor: 'white',
+                    borderRadius: 10,
+                  },
+                ]}
+                errorCorrectionLevel="H"
+                padding={16}
+                //pieceSize={10}
+                pieceBorderRadius={4}
+                isPiecesGlued
+                color={'black'}
+                outerEyesOptions={{
+                  topLeft: {
+                    borderRadius: [30, 30, 30, 30],
+                  },
+                  topRight: {
+                    borderRadius: [30, 30, 30, 30],
+                  },
+                  bottomLeft: {
+                    borderRadius: [30, 30, 30, 30],
+                  },
+                }}
+                innerEyesOptions={{
+                  borderRadius: 15,
+                }}
+              />
             </Pressable>
+            <View
+              style={{
+                flexDirection: 'row',
+                justifyContent: 'space-between',
+                alignItems: 'center',
+              }}>
+              <Text
+                style={{
+                  fontSize: ratio > 1.7 ? 24 : 20,
+                  fontWeight: 'bold',
+                  color: 'white',
+                  textAlign: 'center',
+                  width: '85%',
+                }}>
+                AccountId: {'\n'}
+                {this.context.value.accountId}
+              </Text>
+              <Pressable
+                onPress={() => {
+                  Clipboard.setString(this.context.value.accountId);
+                  ToastAndroid.show(
+                    'Address copied to clipboard',
+                    ToastAndroid.LONG,
+                  );
+                }}
+                style={{
+                  width: '15%',
+                  alignItems: 'flex-start',
+                }}>
+                <IconIonicons name="copy" size={30} color={'white'} />
+              </Pressable>
+            </View>
+            <View
+              style={{
+                flexDirection: 'row',
+                justifyContent: 'center',
+                width: '100%',
+              }}>
+              <Pressable
+                style={[GlobalStyles.buttonStyle]}
+                onPress={() => this.props.navigation.goBack()}>
+                <Text style={[GlobalStyles.buttonText]}>Return</Text>
+              </Pressable>
+            </View>
           </View>
+        ) : (
           <View
-            style={{
-              flexDirection: 'row',
-              justifyContent: 'center',
-              width: '100%',
-            }}>
+            style={[
+              GlobalStyles.mainSend,
+              {justifyContent: 'space-around', alignItems: 'center'},
+            ]}>
+            <Text style={GlobalStyles.exoTitle}>Receive Hbar or Tokens</Text>
             <Pressable
-              style={[GlobalStyles.buttonStyle]}
-              onPress={() => this.props.navigation.goBack()}>
-              <Text style={[GlobalStyles.buttonText]}>Return</Text>
+              onPress={() => {
+                this.setState({flag: !this.state.flag});
+              }}>
+              <QRCodeStyled
+                maxSize={Dimensions.get('screen').width - 40}
+                data={this.context.value.publicKey}
+                style={[
+                  {
+                    backgroundColor: 'white',
+                    borderRadius: 10,
+                  },
+                ]}
+                errorCorrectionLevel="H"
+                padding={8}
+                //pieceSize={10}
+                pieceBorderRadius={4}
+                isPiecesGlued
+                color={'black'}
+                outerEyesOptions={{
+                  topLeft: {
+                    borderRadius: [30, 30, 30, 30],
+                  },
+                  topRight: {
+                    borderRadius: [30, 30, 30, 30],
+                  },
+                  bottomLeft: {
+                    borderRadius: [30, 30, 30, 30],
+                  },
+                }}
+                innerEyesOptions={{
+                  borderRadius: 15,
+                }}
+              />
             </Pressable>
+            <View
+              style={{
+                flexDirection: 'row',
+                justifyContent: 'space-between',
+                alignItems: 'center',
+              }}>
+              <Text
+                style={{
+                  fontSize: ratio > 1.7 ? 24 : 20,
+                  fontWeight: 'bold',
+                  color: 'white',
+                  textAlign: 'center',
+                  width: '85%',
+                }}>
+                EVM Address: {'\n'}
+                {this.context.value.publicKey.substring(0, 21)}
+                {'\n'}
+                {this.context.value.publicKey.substring(21, 42)}
+              </Text>
+              <Pressable
+                onPress={() => {
+                  Clipboard.setString(this.context.value.publicKey);
+                  ToastAndroid.show(
+                    'Address copied to clipboard',
+                    ToastAndroid.LONG,
+                  );
+                }}
+                style={{
+                  width: '15%',
+                  alignItems: 'flex-start',
+                }}>
+                <IconIonicons name="copy" size={30} color={'white'} />
+              </Pressable>
+            </View>
+            <View
+              style={{
+                flexDirection: 'row',
+                justifyContent: 'center',
+                width: '100%',
+              }}>
+              <Pressable
+                style={[GlobalStyles.buttonStyle]}
+                onPress={() => this.props.navigation.goBack()}>
+                <Text style={[GlobalStyles.buttonText]}>Return</Text>
+              </Pressable>
+            </View>
           </View>
-        </View>
+        )}
       </View>
     );
   }

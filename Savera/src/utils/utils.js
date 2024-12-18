@@ -2,6 +2,8 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import ReactNativeBiometrics from 'react-native-biometrics';
 import EncryptedStorage from 'react-native-encrypted-storage';
 import Decimal from 'decimal.js';
+import { ethers } from 'ethers';
+import Crypto from 'react-native-quick-crypto';
 
 export async function getAsyncStorageValue(label) {
   try {
@@ -263,4 +265,55 @@ export function percentageSaving(number, percentage) {
 
 export function percentageSavingToken(number, percentage, usd1, usd2) {
   return number * (percentage / 100) * (usd1 / usd2);
+}
+
+export function removeDuplicatesByKey(arr, key) {
+  const seen = new Set();
+  
+  return arr
+    .slice().reverse() // Reverse the array
+    .filter(item => {
+      if (seen.has(item[key])) {
+        return false; // Skip if the value has already been seen
+      }
+      seen.add(item[key]);
+      return true; // Keep the item if it's the first time the value is encountered
+    })
+    .reverse(); // Reverse it back to original order
+}
+
+export function decrypt(encryptedText, _secret, myIV) {
+  const secret = ethers.utils.getAddress(_secret)
+  const iv = Buffer.from(myIV, 'base64');  // Convert IV back to a buffer
+
+  // Create the key from the secret
+  const key = Crypto.createHash('sha256').update(secret).digest();
+
+  // Create the decipher object
+  const decipher = Crypto.createDecipheriv('aes-256-cbc', key, iv);
+
+  // Decrypt the ciphertext
+  let decrypted = decipher.update(encryptedText, 'base64', 'utf8');
+  decrypted += decipher.final('utf8');
+
+  return decrypted;
+}
+
+export function encrypt(plaintext, _secret, myIV = null) {
+	const secret = ethers.utils.getAddress(_secret)
+	// Create a key from the secret using SHA-256 (32 bytes for AES-256)
+	const key = Crypto.createHash('sha256').update(secret).digest();
+
+	// Generate a random 16-byte IV
+	const iv = myIV===null ? Crypto.randomBytes(16) : Buffer.from(myIV, 'base64');
+
+	// Create the cipher object
+	const cipher = Crypto.createCipheriv('aes-256-cbc', key, iv);
+
+	// Encrypt the plaintext
+	let encrypted = cipher.update(plaintext, 'utf8', 'base64');
+	encrypted += cipher.final('base64');
+
+	// Return IV + encrypted text, separated by ':'
+	return [iv.toString('base64'), encrypted]
 }

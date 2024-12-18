@@ -15,6 +15,7 @@ import ContextModule from '../../utils/contextModule';
 import Tab1 from './tabs/tab1';
 import Tab2 from './tabs/tab2';
 import Tab3 from './tabs/tab3';
+import Tab4 from './tabs/tab4';
 
 // Tabs
 
@@ -81,6 +82,7 @@ class Main extends Component {
           {this.state.tab === 0 && <Tab1 navigation={this.props.navigation} />}
           {this.state.tab === 1 && <Tab2 navigation={this.props.navigation} />}
           {this.state.tab === 2 && <Tab3 navigation={this.props.navigation} />}
+          {this.state.tab === 3 && <Tab4 navigation={this.props.navigation} />}
         </View>
         <View style={[GlobalStyles.footerMain]}>
           <Pressable
@@ -144,6 +146,27 @@ class Main extends Component {
                   : GlobalStyles.selectorText
               }>
               Cards
+            </Text>
+          </Pressable>
+          <Pressable
+            style={GlobalStyles.selector}
+            onPress={() =>
+              this.setState({
+                tab: 3,
+              })
+            }>
+            <IconIonicons
+              name="chatbubbles"
+              size={iconSize}
+              color={this.state.tab === 3 ? mainColor : 'white'}
+            />
+            <Text
+              style={
+                this.state.tab === 3
+                  ? GlobalStyles.selectorSelectedText
+                  : GlobalStyles.selectorText
+              }>
+              Chat
             </Text>
           </Pressable>
         </View>

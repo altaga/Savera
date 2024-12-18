@@ -1,4 +1,6 @@
-import React, {Component, Fragment} from 'react';
+import { RN_SPONSOR_CARD_URL } from '@env';
+import nodejs from 'nodejs-mobile-react-native';
+import React, { Component, Fragment } from 'react';
 import {
   Dimensions,
   Pressable,
@@ -8,9 +10,9 @@ import {
   View,
 } from 'react-native';
 import CreditCard from 'react-native-credit-card';
-import * as Crypto from 'react-native-crypto';
+import LinearGradient from 'react-native-linear-gradient';
 import RNPickerSelect from 'react-native-picker-select';
-import GlobalStyles, {mainColor} from '../../../styles/styles';
+import GlobalStyles, { mainColor } from '../../../styles/styles';
 import {
   CloudPublicKeyEncryption,
   blockchain,
@@ -25,9 +27,6 @@ import {
   setAsyncStorageValue,
 } from '../../../utils/utils';
 import ReadCard from '../components/readCard';
-import {RN_SPONSOR_CARD_URL} from '@env';
-import nodejs from 'nodejs-mobile-react-native';
-import LinearGradient from 'react-native-linear-gradient';
 
 function setTokens(array) {
   return array.map((item, index) => {

@@ -26,6 +26,8 @@ NON-EDITED VIDEO: [VIDEO](https://youtu.be/UTTW62M5JV4)
 
 - Card Account: This wallet, the same as the previous one, is a Custodial Wallet, this, unlike being controlled through the Main Account, is controlled through the hash of the card that is merged when the account is created.
 
+- Chat: Creamos un Chat completamente on-chain, el cual nos permite a travez de un chat parecido a WeChat o Venmo realizar transferencias de USDC Mainnet.
+
 # Introduction:
 
 Savera is a blockchain wallet and platform that empowers undeserved communities through saving. Employing novel Blockchain technologies through Hedera such as predictable fees and optimized savings. It also combines it with TradFi via seamless card payments.
@@ -150,9 +152,20 @@ All technical implementations for this tab are included here.
 - [CODE](./Savera/src/screens/main/tabs/tab3.js)
 - [ADD CARD](./Cloud%20Functions/AddCard.js)
 
+## Chat:
+
+The last but not least important part of our project was the development of a on-chain chat which allows users to send messages in a completely decentralized way and with the certainty that the communication between them is completely encrypted and secure. In addition to the ability to make USDC transfers on the same chain. This feature allows us to increase the adoption and use of crypto since today there are already alternatives to do this in TradFi such as Venmo or WeChat Pay. [5](#references)
+
+<img src="./Images/20.png" width="32%"> <img src="./Images/21.png" width="32%"> <img src="./Images/22.png" width="32%">
+
+All technical implementations for this tab are included here.
+- [CODE](./Savera/src/screens/main/tabs/tab4.js)
+- [CODE](./Savera/src/screens/chat/chat.js)
+
 # References:
 
 1. https://blog.quicknode.com/Hedera-network-quicknode-solving-blockchain-challenges-with-scalability-to-move-web3-towards-widespread-adoption/
 2. https://hederafoundation.org/use-cases/defi
 3. https://hedera.com/use-cases/payments
 4. https://medium.com/@idoexist99/Hedera-the-speedy-new-blockchain-built-for-cool-dapps-2f39c55f8d56
+5. https://stripe.com/en-mx/resources/more/text-to-pay-101-what-it-is-how-it-works-and-how-to-implement-it
